@@ -2,16 +2,25 @@
 <html>
 <body>
     <script>
-        var password = prompt("パスワードを入力してください");
+    var password = prompt("パスワードを入力してください");
 
-        if (password === "おおぞら１組") {
-            document.write("");
-            // ここに保護されたコンテンツを表示するコードを追加できます
-        } else {
-            alert("パスワードが違います");
-            window.location = ""; // 別のページにリダイレクト
-        }
-    </script>
+    if (password === "おおぞら１組") {
+        document.write("");
+        // ここに保護されたコンテンツを表示するコードを追加できます
+    } else {
+        alert("パスワードが違います");
+        window.location = ""; // 別のページにリダイレクト
+    }
+
+    // パスワードを伏字にして表示する処理
+    var hiddenPassword = "";
+
+    for (var i = 0; i < password.length; i++) {
+        hiddenPassword += "*";
+    }
+
+    document.write("入力されたパスワード: " + hiddenPassword);
+</script>
     <link rel="stylesheet" type="text/css" href="3.css">
     <link rel="stylesheet" type="text/css" href="4.css">
     <center>
